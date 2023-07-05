@@ -28,16 +28,6 @@ class CreateCarsTable extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->foreignId('size_id')
-                ->constrained('catalogues')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->foreignId('color_id')
-                ->constrained('catalogues')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
             $table->foreignId('sale_id')
                 ->nullable()
                 ->constrained('sales')

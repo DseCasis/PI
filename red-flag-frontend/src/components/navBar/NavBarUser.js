@@ -6,9 +6,6 @@ export default function NavBarUser({openOption, photo}){
     const itemsNav= [{
         item: 'Inicio',
         path: '/home'
-    },{
-        item: 'Ayuda',
-        path: '/help'
     }];
 
     return(

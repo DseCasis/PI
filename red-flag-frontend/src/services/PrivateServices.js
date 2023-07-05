@@ -105,23 +105,6 @@ export const getCategories =()=>{
     return request.then(response=>response.data)
 }
 
-export const getColors =()=>{
-    const request = axios(`${URL_CATALOGUES}color-catalogues`,{
-        headers:{
-            Authorization: token
-        }
-    })
-    return request.then(response=>response.data)
-}
-
-export const getSizes =()=>{
-    const request = axios(`${URL_CATALOGUES}size-catalogues`,{
-        headers:{
-            Authorization: token
-        }
-    })
-    return request.then(response=>response.data)
-}
 /*****************************************************************
  ***************         SERVICE CAR        *******************
  *****************************************************************/

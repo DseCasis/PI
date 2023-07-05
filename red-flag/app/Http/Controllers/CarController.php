@@ -43,8 +43,6 @@ class CarController extends Controller
         $car = new Car();
         $car->product()->associate(Product::find($request->input('product')));
         $car->user()->associate(User::find($user));
-        $car->size()->associate(Catalogue::find($request->input('size')));
-        $car->color()->associate(Catalogue::find($request->input('color')));
         $car->amount = $request->input('amount');
         $car->total_price = $this->calculatePrice($car);
         $this->discountStock($car);
@@ -61,8 +59,6 @@ class CarController extends Controller
 
     public function update(Request $request,Car $car)
     {
-        $car->size()->associate(Catalogue::find($request->input('size')));
-        $car->color()->associate(Catalogue::find($request->input('color')));
         $car->amount = $request->input('amount');
         $car->total_price = $this->calculatePrice($car);
         $car->save();

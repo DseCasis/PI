@@ -36,8 +36,6 @@ Route::middleware('auth:sanctum')->group(function () {
         // Catalogue
         Route::get('carrer-catalogues', [CatalogueController::class, 'getCarrer']);
         Route::get('category-catalogues', [CatalogueController::class, 'getCategory']);
-        Route::get('color-catalogues', [CatalogueController::class, 'getColor']);
-        Route::get('size-catalogues', [CatalogueController::class, 'getSize']);
         // cars
         Route::get('cars', [CarController::class, 'index']);
         Route::get('cars/{car}', [CarController::class, 'show']);

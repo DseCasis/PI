@@ -12,11 +12,7 @@ export default function NavbarAdmin({handleLogout}){
     },{
         item: 'Ventas',
         path: '/sales'
-    },{
-        item: 'Chat',
-        path: '/chats'
-    }
-    ];
+    }];
 
 
     return(
