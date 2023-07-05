@@ -1,18 +1,18 @@
 import {BsFillCloudArrowUpFill} from "react-icons/bs";
 import {useForm} from "react-hook-form";
 import {useEffect, useState} from "react";
-import {createProduct, getCategories, getGenders} from "../../services/PrivateServices";
+import {createProduct, getCategories, getCarrers} from "../../services/PrivateServices";
 
 
 export default function FormProduct({closeModal,addProduct}){
     const {handleSubmit,register,formState:{errors}}=useForm()
-    const [genders, setGenders]=useState([]);
+    const [carrers, setCarrers]=useState([]);
     const [categories, setCategories]=useState([]);
 
     useEffect(()=>{
-        getGenders().then(
+        getCarrers().then(
             response=>{
-                setGenders(response.data)
+                setCarrers(response.data)
             }
         )
         getCategories().then(
@@ -25,12 +25,12 @@ export default function FormProduct({closeModal,addProduct}){
     const onSubmit=(data)=>{
         console.log(data)
         const categoryId = parseFloat(data.category.id)
-        const genderId = parseFloat(data.gender.id)
+        const carrerId = parseFloat(data.carrer.id)
         const formData = new FormData();
         formData.append('name', data.name);
         formData.append('stock', data.stock);
         formData.append('category', categoryId);
-        formData.append('gender', genderId);
+        formData.append('carrer', carrerId);
         formData.append('price', data.price);
         formData.append('discount', data.discount);
         formData.append('description', data.description);
@@ -67,7 +67,7 @@ export default function FormProduct({closeModal,addProduct}){
                     </label>
                     {errors.name?.type==="required"&& <p  className="text-red-400 text-sm">* El campo es requerido</p>}
                 </div>
-                {/* category and gender */}
+                {/* category and carrer */}
                 <div className="flex grid grid-cols-2 space-x-2">
                     {/* category */}
                     <div className="w-full mb-0">
@@ -83,13 +83,13 @@ export default function FormProduct({closeModal,addProduct}){
                         </select>
                     </div>
 
-                    {/* gender */}
+                    {/* carrer */}
                     <div className="w-full mb-0">
                         <select className="w-full py-4 px-0 bg-azul text-orange-600 placeholder:font-semibold rounded hover:ring-1 outline-orange-600"
-                                {...register("gender.id")}>
+                                {...register("carrer.id")}>
                             <option value="">Carrera</option>
-                            {genders.length
-                                && genders.map(value => {
+                            {carrers.length
+                                && carrers.map(value => {
                                     return (
                                         <option key={value.id} value={value.id}>{value.name}</option>
                                     )

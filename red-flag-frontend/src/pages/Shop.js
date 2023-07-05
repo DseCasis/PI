@@ -8,12 +8,12 @@ import CarouselComponent from '../components/CarouselComponent'
 import Footer from "../components/Footer";
 
 export default function Shop(){
-    let {gender}=useParams()
+    let {carrer}=useParams()
     const [carId,setCarId]=useState(null);
     const [isOpen,setIsOpen]=useState(false);
-    const [shirts,setShirts]=useState([]);
-    const [pants,setPants]=useState([]);
-    const [coats,setCoats]=useState([]);
+    const [food,setFood]=useState([]);
+    const [craft,setCraft]=useState([]);
+    const [clothes,setClothes]=useState([]);
     const [products,setProducts]=useState([]);
 
 
@@ -38,13 +38,13 @@ export default function Shop(){
     useEffect(()=>{
         const loggedUser = window.localStorage?.getItem('loggedUser')
         setToken(JSON.parse(loggedUser))
-        getProducts(gender).then(response=>{
+        getProducts(carrer).then(response=>{
             const products = response.data
-            setShirts(products.filter(value=>value.category?.name === 'CAMISA'))
-            setPants(products.filter(value=>value.category?.name === 'PANTALON'))
-            setCoats(products.filter(value=>value.category?.name === 'ABRIGO'))
+            setFood(products.filter(value=>value.category?.name === 'FOOD'))
+            setCraft(products.filter(value=>value.category?.name === 'CRAFT'))
+            setClothes(products.filter(value=>value.category?.name === 'CLOTHES'))
         })
-    },[gender])
+    },[carrer])
 
     const addWishes=(product)=>{
         const formData = new FormData();
@@ -60,9 +60,9 @@ export default function Shop(){
     return(
         <div className=''>
             <CarouselComponent products={products}/>
-            <ProductCard title={'Comida'} addWishes={addWishes} handleFastBuy={handleFastBuy} products={shirts} handleFormModal={handleFormModal}></ProductCard>
-            <ProductCard title={'Manualidades'} addWishes={addWishes}  handleFastBuy={handleFastBuy} products={pants} handleFormModal={handleFormModal}></ProductCard>
-            <ProductCard title={'Vestimenta'} addWishes={addWishes}   handleFastBuy={handleFastBuy} products={coats} handleFormModal={handleFormModal}></ProductCard>
+            <ProductCard title={'Comida'} addWishes={addWishes} handleFastBuy={handleFastBuy} products={food} handleFormModal={handleFormModal}></ProductCard>
+            <ProductCard title={'Manualidades'} addWishes={addWishes}  handleFastBuy={handleFastBuy} products={craft} handleFormModal={handleFormModal}></ProductCard>
+            <ProductCard title={'Vestimenta'} addWishes={addWishes}   handleFastBuy={handleFastBuy} products={clothes} handleFormModal={handleFormModal}></ProductCard>
 
             {isOpen && <FormCar carId={carId} closeModal={handleFormModal}/>}
             <Footer/>

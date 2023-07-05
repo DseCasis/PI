@@ -1,4 +1,4 @@
-import Gender from "../components/productos/Gender";
+import Carrer from "../components/productos/Carrer";
 import {useEffect} from "react";
 import {setToken} from "../services/PrivateServices";
 
@@ -9,7 +9,7 @@ export default function Home(){
     },[])
     return(
         <div>
-            <Gender></Gender>
+            <Carrer></Carrer>
         </div>
     )
 }

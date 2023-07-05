@@ -46,8 +46,8 @@ export const getProductAll =()=>{
     return request.then(response=>response.data)
 }
 
-export const getProducts =(gender)=>{
-    const request = axios(`${URL_PRODUCTS}-${gender}`,{
+export const getProducts =(carrer)=>{
+    const request = axios(`${URL_PRODUCTS}-${carrer}`,{
         headers:{
             Authorization: token
         }
@@ -87,8 +87,8 @@ export const destroyProduct =(id)=>{
  *****************************************************************/
 
 
-export const getGenders =()=>{
-    const request = axios(`${URL_CATALOGUES}gender-catalogues`,{
+export const getCarrers =()=>{
+    const request = axios(`${URL_CATALOGUES}carrer-catalogues`,{
         headers:{
             Authorization: token
         }

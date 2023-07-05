@@ -74,9 +74,10 @@ export default function UserForm(){
                                     {...register('phone',{
                                         required: true
                                     })}
-                                    type="text"
+                                    type="number"
+                                    max={10}
                                     placeholder="Telefono"
-                                    className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                                    className="w-full border-none ml-10 bg-transparent outline-none placeholder:italic focus:outline-none"
                                 />
                             </div>
 
