@@ -12,7 +12,7 @@ class ProductResource extends JsonResource
         return [
             'id'=> $this->id,
             'category'=> CatalogueResource::make($this->category),
-            'gender'=> CatalogueResource::make($this->gender),
+            'carrer'=> CatalogueResource::make($this->carrer),
             'name'=> $this->name,
             'price'=> $this->price,
             'image'=> $this->image,

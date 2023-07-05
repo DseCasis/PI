@@ -17,8 +17,6 @@ class CarResource extends JsonResource
             'product'=> ProductResource::make($this->product),
             'sale'=> SaleResource::make($this->sale),
             'user'=> UserResource::make($this->user),
-            'size'=> CatalogueResource::make($this->size),
-            'color'=> CatalogueResource::make($this->color),
             'totalPrice'=> $this->total_price,
             'amount'=> $this->amount,
         ];
