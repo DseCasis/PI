@@ -17,7 +17,9 @@ export default function NavBarUser({openOption, photo}){
                 <ul className="flex py-2 px-16 bg-white justify-between items-center">
 
                     <li>
-                        <Link to='home' className='font-titan text-3xl text-orange-500' >Red Flag</Link>
+                        <Link to='home' className='font-titan text-3xl text-orange-500' >
+                        <img className="w-20 h-15" src="https://yavirac.edu.ec/img/Logo%20Yavirac.png" alt=""/>
+                        </Link>
                     </li>
                     <ul className='w-28 h-full flex justify-between items-center'>
                         <li className='w-12'>

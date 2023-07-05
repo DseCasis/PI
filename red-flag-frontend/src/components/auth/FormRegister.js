@@ -45,7 +45,7 @@ export default function FormRegister({handleIsLogin, isLogin}){
                                     {...register('email',{
                                         required: true
                                     })}
-                                    type="text"
+                                    type="email"
                                     placeholder="Correo Electronico"
                                     className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                                 />
@@ -70,7 +70,8 @@ export default function FormRegister({handleIsLogin, isLogin}){
                                 {...register('phone',{
                                     required: true
                                 })}
-                                type="text"
+                                type="number"
+                                maxLength="10"
                                 placeholder="Telefono"
                                 className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                             />

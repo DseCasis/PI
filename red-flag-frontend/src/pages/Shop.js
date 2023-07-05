@@ -60,9 +60,9 @@ export default function Shop(){
     return(
         <div className=''>
             <CarouselComponent products={products}/>
-            <ProductCard title={'CAMISA'} addWishes={addWishes} handleFastBuy={handleFastBuy} products={shirts} handleFormModal={handleFormModal}></ProductCard>
-            <ProductCard title={'PANTALON'} addWishes={addWishes}  handleFastBuy={handleFastBuy} products={pants} handleFormModal={handleFormModal}></ProductCard>
-            <ProductCard title={'ABRIGO'} addWishes={addWishes}   handleFastBuy={handleFastBuy} products={coats} handleFormModal={handleFormModal}></ProductCard>
+            <ProductCard title={'Comida'} addWishes={addWishes} handleFastBuy={handleFastBuy} products={shirts} handleFormModal={handleFormModal}></ProductCard>
+            <ProductCard title={'Manualidades'} addWishes={addWishes}  handleFastBuy={handleFastBuy} products={pants} handleFormModal={handleFormModal}></ProductCard>
+            <ProductCard title={'Vestimenta'} addWishes={addWishes}   handleFastBuy={handleFastBuy} products={coats} handleFormModal={handleFormModal}></ProductCard>
 
             {isOpen && <FormCar carId={carId} closeModal={handleFormModal}/>}
             <Footer/>

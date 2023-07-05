@@ -1,6 +1,6 @@
-import hombre from './../../assets/hombre.jpg'
 import mujer from './../../assets/mujer.jpg'
 import { Link } from 'react-router-dom'
+import comida from './../../assets/comida.jpg'
 
 
 export default function Gender(){
@@ -10,7 +10,7 @@ export default function Gender(){
 
                 <div className="blur-lg w-1/2 hover:blur-none">
                     <Link to='shop/male'>
-                    <img className="w-full h-full object-cover object-center" src={hombre} alt=""/>
+                    <img className="w-full h-full object-cover object-center" src={comida} alt=""/>
                     </Link>
                 </div>
 

@@ -6,17 +6,17 @@ import { RxDotFilled } from 'react-icons/rx';
 export default function CarouselComponent({products}) {
     const slides = [
         {
-            url: 'https://www.instyle.es/medio/2019/02/04/pantalones-cropped_d62cd3c5_1200x630.jpg',
+            url: 'https://www.tutiendavegana.es/wp-content/uploads/2022/12/que-es-la-comida-casera.jpg',
         },
         {
-            url: 'https://s7d2.scene7.com/is/image/aeo/20230119-m-shirtsandflannels-lg?scl=1&qlt=60&fmt=jpeg',
+            url: 'https://img.freepik.com/fotos-premium/comida-casera-chuleta-cerdo-frita-ensalada-col-rallada-salsa-arroz-tonkatsu_637068-25.jpg',
         },
         {
-            url: 'https://i.ytimg.com/vi/SY7InzAHgRk/maxresdefault.jpg',
+            url: 'https://www.materialescolar.es/blog/wp-content/uploads/2014/07/Manualidades.png',
         },
 
         {
-            url: 'https://imagenes.elpais.com/resizer/mLznFiIp2ErtEt134-GdB_K7v1k=/1960x1103/cloudfront-eu-central-1.images.arcpublishing.com/prisa/F5F2KG2RTVARWZ3L6VUQFED47E.jpg',
+            url: 'https://fiestasycumples.com/wp-content/uploads/2021/06/Captura-de-pantalla-2021-06-06-a-las-18.53.22-min.jpg',
         },
         {
             url: 'https://i.ytimg.com/vi/JAFkEgWfwLA/maxresdefault.jpg',

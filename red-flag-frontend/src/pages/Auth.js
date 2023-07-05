@@ -1,7 +1,7 @@
 import FormLogin from "../components/auth/FormLogin";
 import FormRegister from "../components/auth/FormRegister";
 import {useState} from "react";
-import ecommerce from "./../assets/ecommerce.avif"
+import instalacion2 from "../assets/instalacion2.png";
 import Alert from "../alerts/Alert";
 
 
@@ -10,7 +10,7 @@ export default function Auth({userLogin}){
     const [logged, setLogged ]= useState(false)
 
     const handleIsLogin=()=>{
-        setIsLogin(true);
+        setIsLogin(!isLogin);
     }
 
     const handleErrorLogin =()=>{
@@ -23,7 +23,7 @@ export default function Auth({userLogin}){
     return(
         <div className="h-screen flex">
             <div className="flex w-2/4 justify-around items-center">
-                <img src={ecommerce} className="h-full w-full object-cover object-center lg:h-full lg:w-full" alt=""/>
+                <img src={instalacion2} className="h-full w-full object-cover object-center lg:h-full lg:w-full" alt=""/>
             </div>
             <div className="flex w-3/4 justify-center items-center bg-white">
                 { isLogin ?
